@@ -14,4 +14,6 @@ tree <- function(line0, angle = 30, reduce = .7, randomness = 0)
     mat <- matrix(c(line1,line2), byrow = T, ncol = 4)
     
     return(mat)
-  }
+  
+    }
+
