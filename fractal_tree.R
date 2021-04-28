@@ -7,13 +7,21 @@ tree <- function(line0, angle = 30, reduce = .7, randomness = 0)
     
     angle2 <- -angle+rnorm(1,0,randomness) #right branch
     
-    line1 <- newLine(line0, angle = angle1, reduce = reduce)
+    line1 <- newLine(line0, angle=angle1, reduce = reduce)
     
-    line2 <- newlLine(line0, angle = angle2, reduce = reduce)
+    line2 <- newLine(line0, angle=angle2, reduce=reduce)
     
     mat <- matrix(c(line1,line2), byrow = T, ncol = 4)
     
     return(mat)
   
     }
+
+fractal <- matrix(c(0,0,0,10), nrow=1)
+emptyCanvas(xlim=c(-30,30), ylim=c(0,35))
+drawObject(fractal)
+for(i in 1:10) {
+  fractal <- iterate(fractal, ifun=tree, angle=23)
+  drawObject(fractal)
+}
 
