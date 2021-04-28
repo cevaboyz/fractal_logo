@@ -28,3 +28,4 @@ for(i in 1:12) {
   drawObject(fractal, lwd=lwd)
 }
 
+#ending
