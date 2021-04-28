@@ -17,15 +17,15 @@ tree <- function(line0, angle = 30, reduce = .7, randomness = 0)
   
 }
 
-set.seed(1234)
+set.seed(07061994)
 fractal <- matrix(c(0,0,0,10), nrow=1)
 emptyCanvas(xlim=c(-30,30), ylim=c(0,35))
-lwd <- 7
+lwd <- 14
 drawObject(fractal, lwd=lwd)
 for(i in 1:12) {
-  lwd <- lwd*0.75
-  fractal <- iterate(fractal, ifun=tree, angle=29, randomness=9)
-  drawObject(fractal, lwd=lwd)
+  lwd <- lwd*0.80
+  fractal <- iterate(fractal, ifun=tree, angle=29, randomness=10)
+  drawObject(fractal, col = "springgreen2" , lwd=lwd)
 }
 
 #ending
